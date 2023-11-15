@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * prompts - displays a shell command prompts.
+ * prompt - displays a shell command prompt.
  * Return: nothing.
 */
 void prompt(void)
