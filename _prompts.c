@@ -1,4 +1,4 @@
-#include "command.h"
+#include "shell.h"
 
 /**
  * prompts - displays a shell prompt.
