@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * prompts - displays a shell prompt.
+ * prompts - displays a shell command prompts.
  * Return: nothing.
 */
-void prompts(void)
+void prompt(void)
 {
 	write(1, "$ ", 2);
 }

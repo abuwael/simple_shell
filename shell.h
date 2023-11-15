@@ -51,8 +51,42 @@ typedef struct command_s
 	struct command_s *next;
 } create_cmd;
 
+void prompt(void);
+char *_getenv(char *varname);
+int _readline(char *line);
+char *_memset(char *s, char value, unsigned int num);
+int remove_reading_space(char **buffer, char *line);
+void (*func_ptr(char *str))(char *);
+char *break_input_line(char *line, char *seperator);
+char *_cmd_abs_path(char *cmdname);
+void clean_token(char **tk_copy, char **token);
+void process_args(char **command, char ***args, char *line_ptr, char *delim);
+create_cmd *parse_cmd(create_cmd **head, char *line_ptr, char *delim);
+void free_node(create_cmd **argv);
+char *_strstr(char *mainstr, char *substr);
 
+void execution_call(char *av);
+void execute_path_command(create_cmd *argv, int n, char *av);
 
-void prompts(void);
+void _ctrlC(int sig __attribute__((unused)));
+void _exit_process(char *status __attribute__((unused)));
+void env(char *en __attribute__((unused)));
+
+int _strlen(char *string);
+int _strcmp(char *str1, char *str2);
+int _strncmp(const char *str1, const char *str2, int n);
+char *_strcat(char *dest, char *src);
+char *_strdup(char *str);
+char *_strncpy(char *dest, char *src, int n);
+char *_strstr(char *mainstr, char *substr);
+char *_strcpy(char *destination, char *source);
+int _atoi(char *string);
+int _putchar(char c);
+void _puts(char *str);
+void _puts2(char *c);
+void print_error(char *input, int counter, char *argv);
+int intlen(int num);
+void array_rev(char *arr, int len);
+char *_itoa(unsigned int n);
 
 #endif
